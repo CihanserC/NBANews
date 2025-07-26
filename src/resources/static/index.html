@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA News Hub - Injuries & Transfers</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="floating-particles"></div>
+
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">NBA News Hub</div>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span>🏥</span>
+                    <span id="injuryCount">0 Injuries</span>
+                </div>
+                <div class="stat-item">
+                    <span>🔄</span>
+                    <span id="transferCount">0 Transfers</span>
+                </div>
+                <div class="stat-item">
+                    <span>📅</span>
+                    <span id="lastUpdate">Never</span>
+                </div>
+                </div>
+                    <div class="author-name">Cihanser Caliskan</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="main-content">
+    <div class="container">
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">NBA Daily Updates</h1>
+            <p class="dashboard-subtitle">Real-time player injuries and transfer news</p>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" onclick="fetchAllData()">
+                <span>🔄 Refresh Now</span>
+            </button>
+            <div class="auto-refresh-info">
+                <span>🕐 Auto-refresh: Every hour</span>
+                <span id="nextRefresh">Next: --:--</span>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">🏥</span>
+                    <h2 class="section-title">Daily Injuries</h2>
+                    <span class="section-count" id="injurySectionCount">0</span>
+                </div>
+                <div id="injuryContent">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🏥</div>
+                        <p>No injury data loaded yet</p>
+                        <small>Enter your API endpoint and click refresh</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">🔄</span>
+                    <h2 class="section-title">Daily Transfers</h2>
+                    <span class="section-count" id="transferSectionCount">0</span>
+                </div>
+                <div id="transferContent">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🔄</div>
+                        <p>No transfer data loaded yet</p>
+                        <small>Enter your API endpoint and click refresh</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>
