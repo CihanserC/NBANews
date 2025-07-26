@@ -1,51 +1,51 @@
 # NBA News Hub
 
-NBA oyuncularının sakatlık ve transfer bilgilerini gösteren canlı bir web uygulaması.
+Live web application displaying NBA player injuries and transfer information.
 
-## Özellikler
+## Features
 
-- 🏥 **Güncel Sakatlık Raporları**: NBA oyuncularının sakatlık durumlarını anlık takip etme
-- 🔄 **Transfer Haberleri**: Gerçekleşen son oyuncu transferleri ve takım değişiklikleri
-- ⏱️ **Otomatik Yenileme**: Her saat başı otomatik veri güncelleme
-- 📊 **İstatistik Özeti**: Toplam sakatlık ve transfer sayılarını görüntüleme
-- 🎨 **Modern Arayüz**: Kullanıcı dostu ve görsel açıdan zengin tasarım
+- 🏥 **Current Injury Reports**: Real-time tracking of NBA players' injury status
+- 🔄 **Transfer News**: Recent player transfers and team changes
+- ⏱️ **Automatic Refresh**: Automatic data updates every hour
+- 📊 **Statistical Summary**: View total injury and transfer numbers
+- 🎨 **Modern Interface**: User-friendly and visually rich design
 
-## Teknolojiler
+## Technologies
 
 - HTML5, CSS3, JavaScript (Frontend)
 - Java Spring Boot (Backend)
-- Maven (Proje yönetimi)
+- Maven (Project management)
 
-## Kurulum
+## Installation
 
-1. Repoyu klonlayın:
+1. Clone the repository:
    ```bash
    git clone https://github.com/CihanserC/nba-news-hub.git
    ```
 
-2. Proje dizinine gidin:
+2. Navigate to the project directory:
    ```bash
    cd nba-news-hub
    ```
 
-3. Maven ile derleyin:
+3. Build with Maven:
    ```bash
    mvn clean package
    ```
 
-4. Uygulamayı çalıştırın:
+4. Run the application:
    ```bash
    java -jar target/nba-news-hub-1.0.0.jar
    ```
 
-5. Tarayıcınızda açın:
+5. Open in your browser:
    ```
    http://localhost:8080
    ```
 
-## API Yapılandırması
+## API Configuration
 
-API bağlantılarını `src/main/resources/static/index.html` içinde ayarlayabilirsiniz:
+You can configure API connections in `src/main/resources/static/js/script.js`:
 
 ```javascript
 const API_CONFIG = {
@@ -59,28 +59,3 @@ const API_CONFIG = {
     }
 };
 ```
-
-## GitHub Pages Dağıtımı
-
-Uygulamayı GitHub Pages üzerinde çalıştırmak için:
-
-1. API konfigürasyonunu statik verilere yönlendirin:
-   ```javascript
-   const API_CONFIG = {
-       injuries: {
-           url: 'data/injuries.json',
-           headers: {}
-       },
-       transfers: {
-           url: 'data/transfers.json',
-           headers: {}
-       }
-   };
-   ```
-
-2. `data` klasörü oluşturun ve statik JSON dosyaları ekleyin
-3. GitHub repository ayarlarından Pages özelliğini aktifleştirin
-
-## Geliştirici
-
-Bu proje Cihanser Caliskan tarafından geliştirilmiştir.
